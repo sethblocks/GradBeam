@@ -84,7 +84,7 @@ theme = gradio.themes.Glass(
 
 
 with gradio.Blocks(theme=theme, title="BeamMP Server") as configPage:
-    gradio.Markdown("# Configure BeamMP Server\nV0.2b")
+    gradio.Markdown("# Configure BeamMP Server\nV0.2")
     with gradio.Row():
         upl= inputs=gradio.UploadButton("Click to upload mods", file_types=["zip"], file_count="multiple")
         out = gradio.Text("You have not made any changes yet")
@@ -93,6 +93,21 @@ with gradio.Blocks(theme=theme, title="BeamMP Server") as configPage:
             rserv = gradio.Button("RESTART SERVER")
     with gradio.Row():
         with gradio.Row():
+            gradio.Markdown("""Vanilla Maps: 
+/levels/gridmap_v2/info.json
+/levels/johnson_valley/info.json
+/levels/automation_test_track/info.json
+/levels/east_coast_usa/info.json
+/levels/hirochi_raceway/info.json
+/levels/italy/info.json
+/levels/jungle_rock_island/info.json
+/levels/industrial/info.json
+/levels/small_island/info.json
+/levels/smallgrid/info.json
+/levels/utah/info.json
+/levels/west_coast_usa/info.json
+/levels/driver_training/info.json
+/levels/derby/info.json""")
             mapsetter = gradio.Text(map)
             setm = gradio.Button("Set Map File")
             showm = gradio.Button("Show Current Map File")
